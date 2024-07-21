@@ -13,14 +13,16 @@
 
   outputs = { self, nixpkgs, hyprland, ... } @ inputs:
   {
-    nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
-      specialArgs = { inherit inputs; };
-        config.allowUnfree = true;
-      modules = [
-        ./configuration.nix
-        ./hardware-configuration.nix
-        ./hyprland.nix
-      ];
+    nixosConfigurations = {
+        nixos = nixpkgs.lib.nixosSystem {
+          system = x86_64-linux;
+          specialArgs = { inherit inputs; };
+          config.allowUnfree = true;
+          modules = [
+            ./configuration.nix
+            ./hyprland.nix
+          ];
+        };
     };
   };
 }
