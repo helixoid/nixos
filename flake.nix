@@ -10,8 +10,8 @@
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       specialArgs = { inherit inputs; };
       modules = [
-        ./configuration.nix
-        ./hyprland.nix
+        ./nixos/configuration.nix
+        ./nixos/hyprland.nix
       ];
     };
   };
