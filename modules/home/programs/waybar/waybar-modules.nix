@@ -62,7 +62,7 @@
 
     # ===== RIGHT MODULES =====
     tray = {
-      icon-size = 20;
+      icon-size = 16;
       spacing = 10;
     };
 
