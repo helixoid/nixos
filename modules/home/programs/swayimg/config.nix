@@ -1,0 +1,23 @@
+{
+  programs.swayimg = {
+    settings = {
+      general = {
+        mode = "viewer";
+        position = "parent";
+        size = "fullscreen";
+        decoration = "no";
+      };
+      info = {
+        show = "yes";
+        info_timeout = 1;
+        status_timeout = 1;
+      };
+      "keys.viewer" = {
+        "h" = "prev_file";
+        "l" = "next_file";
+        "gg" = "first_file";
+        "Shift+g" = "last_file";
+      };
+    };
+  };
+}

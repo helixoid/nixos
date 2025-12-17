@@ -1,0 +1,5 @@
+- flake.nix is the starting point.
+- hosts/ contains machine specific configs.
+- modules has all the main configs.
+- drivers/ contains all the drivers for all type of hardware.
+- home/ contains the home manager specific configs.

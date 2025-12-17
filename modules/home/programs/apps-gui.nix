@@ -1,0 +1,19 @@
+{pkgs,...}:{
+  home.packages = with pkgs; [
+    gimp3
+    gnome-disk-utility
+    brave
+    meld
+    mission-center
+    picard
+    songrec
+    qbittorrent
+    zed-editor
+    libreoffice-fresh
+    papers
+    pavucontrol
+    file-roller
+    readest
+    rnote
+  ];
+}

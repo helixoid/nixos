@@ -1,0 +1,89 @@
+{
+  programs.fastfetch.settings = {
+    "$schema" = "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json";
+
+    logo = {
+      source = "~/.config/fastfetch/images/NixOS.png";
+      type = "kitty";
+      height = 14;
+      padding = {
+        top = 2;
+      };
+    };
+
+    display = {
+      separator = " ";
+    };
+
+    modules = [
+      "break"
+      "break"
+      "break"
+      {
+        type = "title";
+        keyWidth = 10;
+      }
+      {
+        type = "custom";
+        format = "~~~~~~~~~~~~~~~~~~~~~~~~~~";
+      }
+      {
+        type = "os";
+        key = " ";
+        keyColor = "34";
+      }
+      {
+        type = "command";
+        key = "󰔠 ";
+        keyColor = "34";
+        text = "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference days";
+      }
+      {
+        type = "kernel";
+        key = " ";
+        keyColor = "34";
+      }
+      {
+        type = "packages";
+        key = " ";
+        keyColor = "34";
+      }
+      {
+        type = "shell";
+        key = " ";
+        keyColor = "34";
+      }
+      {
+        type = "terminal";
+        key = " ";
+        keyColor = "34";
+      }
+      {
+        type = "wm";
+        key = " ";
+        keyColor = "34";
+      }
+      {
+        type = "uptime";
+        key = " ";
+        keyColor = "34";
+      }
+      {
+        type = "media";
+        key = " ";
+        keyColor = "34";
+      }
+      {
+        type = "player";
+        key = "󰑈 ";
+        keyColor = "34";
+      }
+      {
+        type = "colors";
+        paddingLeft = 2;
+        symbol = "circle";
+      }
+      "break"
+    ];
+  };
+}
